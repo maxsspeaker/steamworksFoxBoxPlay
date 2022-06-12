@@ -41,7 +41,7 @@ def download():
     args.append("+quit")
 
     # call steamcmd
-    process = subprocess.Popen(args, stdout=subprocess.PIPE, errors='ignore')
+    process = subprocess.Popen(args, stdout=subprocess.PIPE, errors='ignore', creationflags=subprocess.CREATE_NO_WINDOW)
     
     # show output
     global output
